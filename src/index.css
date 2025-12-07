@@ -1,54 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Alegreya+Sans:wght@300;400;500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 33 31% 91%;
+    --foreground: 25 45% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 36 33% 95%;
+    --card-foreground: 25 45% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 36 33% 95%;
+    --popover-foreground: 25 45% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 25 45% 35%;
+    --primary-foreground: 36 33% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 180 33% 52%;
+    --secondary-foreground: 25 45% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 33 20% 75%;
+    --muted-foreground: 25 35% 35%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 180 33% 52%;
+    --accent-foreground: 25 45% 15%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 36 33% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 33 25% 70%;
+    --input: 33 25% 70%;
+    --ring: 25 45% 35%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 36 33% 95%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 25 45% 15%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 25 45% 35%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 36 33% 95%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 180 33% 52%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 25 45% 15%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 33 25% 70%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 180 33% 52%;
+
+    --copper: 25 45% 45%;
+    --sepia: 33 31% 65%;
+    --teal-ether: 180 33% 52%;
+    --wood-dark: 25 45% 15%;
+    --sand: 36 33% 85%;
   }
 
   .dark {
@@ -97,5 +105,46 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Alegreya Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Cormorant", serif;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .text-copper {
+    color: hsl(var(--copper));
+  }
+
+  .text-sepia {
+    color: hsl(var(--sepia));
+  }
+
+  .text-teal-ether {
+    color: hsl(var(--teal-ether));
+  }
+
+  .bg-copper {
+    background-color: hsl(var(--copper));
+  }
+
+  .bg-sepia {
+    background-color: hsl(var(--sepia));
+  }
+
+  .bg-sand {
+    background-color: hsl(var(--sand));
+  }
+
+  .border-copper {
+    border-color: hsl(var(--copper));
   }
 }
