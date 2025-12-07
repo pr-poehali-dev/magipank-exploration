@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -76,6 +77,7 @@ const mockTestimonials = [
 ];
 
 export default function Index() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('home');
   const [selectedFaction, setSelectedFaction] = useState<string>('all');
 
@@ -125,7 +127,7 @@ export default function Index() {
               <Icon name="Home" className="w-4 h-4 mr-2" />
               Главная
             </TabsTrigger>
-            <TabsTrigger value="settlement" className="data-[state=active]:bg-copper/10 data-[state=active]:text-copper">
+            <TabsTrigger value="settlement" className="data-[state=active]:bg-copper/10 data-[state=active]:text-copper" onClick={() => navigate('/settlement')}>
               <Icon name="Castle" className="w-4 h-4 mr-2" />
               Поселение
             </TabsTrigger>
